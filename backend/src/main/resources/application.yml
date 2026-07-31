@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: echoroom-backend
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://localhost:27017/echoroom}
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-this-to-a-long-random-secret-key-in-production-min-256-bits}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}   # 24 hours
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5173}
+  admin:
+    bootstrap-username: ${ADMIN_USERNAME:admin}
+    bootstrap-password: ${ADMIN_PASSWORD:admin123}
+  uploads:
+    dir: ${UPLOAD_DIR:uploads}
+
+logging:
+  level:
+    com.echoroom: INFO
