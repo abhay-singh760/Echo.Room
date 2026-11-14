@@ -22,6 +22,7 @@ A self-hostable chat platform featuring JWT-secured messaging over WebSocket/STO
 [Quick Start](#-quick-start) · [Features](#-features) · [Architecture](#-architecture) · [Configuration](#-configuration) · [Production Checklist](#-production-checklist)
 
 </div>
+.
 
 ---
 
